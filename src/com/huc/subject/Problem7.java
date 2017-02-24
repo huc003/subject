@@ -6,5 +6,18 @@ package com.huc.subject;
  *
  */
 public class Problem7 {
+	public static void main(String[] args) {
+		int n = 2,c = 0;
+		for (int i = 1; i < 10; i++) {
+			if(n%i==0){
+				c++;
+			}
+		}
+		if(c==2){
+			System.out.println("是质数:"+n);
+		}else{
+			System.out.println("不是质数:"+n);
+		}
+	}
 	
 }
