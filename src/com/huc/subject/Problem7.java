@@ -7,16 +7,22 @@ package com.huc.subject;
  */
 public class Problem7 {
 	public static void main(String[] args) {
-		int n = 2,c = 0;
-		for (int i = 1; i < 10; i++) {
-			if(n%i==0){
-				c++;
+		int n = 1;
+		for (int j = 2; j < 150000; j++) {
+			int c = 0;
+			if(n<=10001){
+				for (int i = 1; i < 150000; i++) {
+					if(j%i==0){
+						c++;
+					}
+					if (c>2){
+						break;
+					}
+				}
+				if(c==2){
+					System.out.println("是质数:"+j+"-----个数："+n++);
+				}
 			}
-		}
-		if(c==2){
-			System.out.println("是质数:"+n);
-		}else{
-			System.out.println("不是质数:"+n);
 		}
 	}
 	
